@@ -1,16 +1,13 @@
 
 import { useForm } from 'react-hook-form'
-import Tag from "../../components/tag/Tag"
 import "./insured.scss"
-import { Checkbox, Input, SelectGroup } from "../../components"
-import Footer from "../../components/footer/Footer"
+import { Checkbox, Input, SelectGroup,Footer, Button, Tag } from "../../components"
 import { useGetUser } from "../../hooks"
 import { useEffect } from "react"
 import { useUserStore } from "../../store/userStore"
 import { useNavigate } from "react-router-dom"
-import Button from '../../components/button/Button'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { object, string } from 'yup'
+import { object, string, boolean } from 'yup'
 
 export const Insured = () => {
   
@@ -31,10 +28,10 @@ export const Insured = () => {
     phone: string()
       .required('Nro. de Celular requerido')
       .min(9, 'El mínimo es de 9 caracteres'),
-    privacy: string()
-      .required('Username is required'),
-    comercialy: string()
-      .required('Username is required'),
+    privacy: boolean()
+      .oneOf([true], ''),
+    comercialy: boolean()
+      .oneOf([true], ''),
   }).required();
 
   const hookform = useForm({

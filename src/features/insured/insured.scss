@@ -16,8 +16,8 @@
 
     &-purple {
       position: absolute;
-      left: -50px;
-      bottom: -100px;
+      left: -99px;
+      bottom: 0px;
       z-index: -1;
       width: 352px;
     }
@@ -30,6 +30,7 @@
 
     &-info {
       padding: 0px 24px;
+      margin-bottom: 20px;
 
       &-banner {
         display: flex;
@@ -143,6 +144,7 @@
         gap: 1em;
         padding: 0 70px;
         max-width: 400px;
+        margin-bottom: 0;
 
         &-banner {
           justify-content: start;

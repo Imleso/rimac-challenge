@@ -7,10 +7,8 @@ interface ButtonProps {
   type?: 'button' | 'submit'
 }
 
-const Button = ({onClick = () => {}, variant = 'red', text, type = 'button'}: ButtonProps) => {
+export const Button = ({onClick = () => {}, variant = 'red', text, type = 'button'}: ButtonProps) => {
   return (
     <button type={type} className={`button is--${variant}`} onClick={onClick}>{text}</button>
   )
 }
-
-export default Button

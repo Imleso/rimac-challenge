@@ -32,7 +32,13 @@ const Plans = () => {
   const handlePlan = (plan: List)=>{
     setPlan(plan)
     navegar("/resumen")
+  }
 
+  const calculateRecomend = (): number => {
+  
+    const recomend = plansFiltered.reduce((maxAge, c) => c.age > maxAge ? c.age : maxAge, 0)
+
+    return recomend
   }
 
   return (
@@ -57,7 +63,7 @@ const Plans = () => {
           <div className="plan-stepContent-stepvar-step"></div>
         </div>
       </div>
-        <hr />
+        <hr className="plan-hr"/>
      
       <div className="plan-info">
         <div className="plan-info-client">
@@ -85,10 +91,10 @@ const Plans = () => {
 
         <div className="plan-info-plans">
          {forMe === "forMe" && plansFiltered.map( (plan,index) => (
-          <PlanTypeCard onclick={()=> handlePlan(plan)} iconSrc={plan.name.includes("Clínica") ? `${import.meta.env.BASE_URL}assets/img/IcHospitalLight.png` : `${import.meta.env.BASE_URL}assets/img/IcHomeLight.png` } planName={plan.name} price={String(plan.price )} descriptions={plan.description} key={index}/>
+          <PlanTypeCard plan={plan} isRecomended={calculateRecomend() === plan.age} onclick={()=> handlePlan(plan)} iconSrc={plan.name.includes("Clínica") ? `${import.meta.env.BASE_URL}assets/img/IcHospitalLight.png` : `${import.meta.env.BASE_URL}assets/img/IcHomeLight.png` }   key={index}/>
          ))}
             {forMe === "forSomeoneelse" && plansList.list.map((plan,index) =>(
-              <PlanTypeCard onclick={()=> handlePlan({...plan, price: plan.price - (plan.price * 5 / 100)})} iconSrc={plan.name.includes("Clínica") ? `${import.meta.env.BASE_URL}assets/img/IcHospitalLight.png` :`${import.meta.env.BASE_URL}assets/img/IcHomeLight.png` } planName={plan.name} price={String(plan.price - (plan.price * 5 / 100))} descriptions={plan.description} key={index}/>
+              <PlanTypeCard onclick={()=> handlePlan({...plan, price: plan.price - (plan.price * 5 / 100)})} iconSrc={plan.name.includes("Clínica") ? `${import.meta.env.BASE_URL}assets/img/IcHospitalLight.png` :`${import.meta.env.BASE_URL}assets/img/IcHomeLight.png` } key={index} plan={plan} priceFiltered={plan.price - (plan.price * 5 / 100)}/>
             ))}
         </div>
       </div>

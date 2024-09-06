@@ -3,7 +3,7 @@ import "./footer.scss"
 
 
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <div className="footer">
         <LogoRimacLigth />
@@ -12,5 +12,3 @@ const Footer = () => {
     </div>
   )
 }
-
-export default Footer

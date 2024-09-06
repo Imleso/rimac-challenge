@@ -6,7 +6,7 @@
     display: none;
   }
 
-  hr {
+  &-hr {
     width: 100%;
     background-color: #c8cdef;
     border: none;
@@ -37,7 +37,7 @@
       border-radius: 20px;
 
       &-step {
-        width: 10px;
+        width: 50%;
         height: 100%;
         background: #4f4fff;
         border-radius: 40px;
@@ -109,7 +109,7 @@
       }
       
     }
-    hr{
+    &-hr{
       display: none;
     }
 

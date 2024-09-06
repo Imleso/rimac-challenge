@@ -1,0 +1,165 @@
+.plan {
+  display: flex;
+  flex-direction: column;
+  
+  &-back {
+    display: none;
+  }
+
+  hr {
+    width: 100%;
+    background-color: #c8cdef;
+    border: none;
+    height: 1px;
+    margin-bottom: 30px;
+  }
+  &-stepContentDesktop{
+      display: none;
+    
+  }
+  &-stepContent {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    p {
+      font-size: 10px;
+      font-weight: 900;
+    }
+
+    &-stepvar {
+      width: 212px;
+      height: 6px;
+      background: #d7dbf5;
+      border-radius: 20px;
+
+      &-step {
+        width: 10px;
+        height: 100%;
+        background: #4f4fff;
+        border-radius: 40px;
+      }
+    }
+  }
+
+  &-info {
+    width: 339px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    &-client {
+      h1 {
+        font-size: 24px;
+      }
+
+      span {
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+
+    &-selectPlan {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+    }
+
+    &-plans {
+      display: flex;
+      flex-direction: row;
+      gap: 2em;
+      overflow-x: scroll;
+      width: 100%;
+      padding: 20px;
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .plan {
+    gap: 2.5em;
+    &-stepContentDesktop{
+      
+      display: flex;
+      background: #EDEFFC;
+      padding: 16px 0px;
+      justify-content: center;
+      gap: 1em;
+      align-items: center;
+
+      p{
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      &-line{
+        color: #4f4fff;
+        
+      }
+
+      span{
+        color: #7981B2;
+        font-weight: 400
+        ;
+      }
+      
+    }
+    hr{
+      display: none;
+    }
+
+    &-stepContent{
+      display: none;
+    }
+
+    &-back {
+      display: flex;
+      gap: 0.5em;
+      align-items: center;
+      color: #4f4fff;
+      font-size: 18px;
+      font-weight: 700;
+      width: 1000px;
+      padding-left: 40px;
+      margin: auto;
+      cursor: pointer;
+
+      &-mobile {
+        display: none;
+      }
+    }
+    &-info {
+      width: auto;
+      &-client {
+        width: 544px;
+        text-align: center;
+
+        h1 {
+          font-size: 40px;
+          margin-bottom: 20px;
+        }
+
+        span {
+          font-size: 16px;
+        }
+      }
+
+      &-selectPlan {
+        flex-direction: row;
+      }
+
+      &-plans {
+        overflow-x: hidden;
+        gap: 3em;
+        flex-wrap: wrap;
+        width: 1000px;
+        justify-content: center;
+      }
+    }
+  }
+}

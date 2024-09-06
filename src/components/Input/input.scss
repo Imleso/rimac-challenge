@@ -1,0 +1,51 @@
+.input {
+
+    
+    .box {
+        background: white;
+        border: 1px solid #5E6488;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        height: 56px;
+
+        input {
+            border: none;
+            padding: 24px 16px 8px 16px;
+            width: 100%;
+    
+            &:focus, &:not(:placeholder-shown)  {
+    
+                outline: none;
+    
+                & + label {
+                    top: 8px;
+                    font-size: 12px;
+                }
+            }
+        }
+        
+        label {
+            position: absolute;
+            top: 18px;
+            left: 16px;
+            transition:  font-size 0.3s, transform 0.3s, color 0.3s;
+            color: #5E6488
+        }
+    
+    }
+    .is-error {
+        border-color: red;
+        margin-bottom: 10px;
+
+        label {
+            color: red;
+        }
+    }
+
+    &-span{
+        font-size: 16px;
+        color: red;
+    }
+}
+

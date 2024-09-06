@@ -1,0 +1,184 @@
+.insured {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  justify-content: space-between;
+
+  &-blur {
+    &-green {
+      position: absolute;
+      right: 0;
+      top: -300px;
+      z-index: -1;
+      width: 352px;
+    }
+
+    &-purple {
+      position: absolute;
+      left: -50px;
+      bottom: -100px;
+      z-index: -1;
+      width: 352px;
+    }
+  }
+
+  &-content {
+    &-imgLarge {
+      display: none;
+    }
+
+    &-info {
+      padding: 0px 24px;
+
+      &-banner {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        justify-content: center;
+
+        &-text {
+          width: 300px;
+
+          .tag {
+            margin-bottom: 8px;
+          }
+
+          h1 {
+            font-size: 28px;
+          }
+        }
+        img {
+          border-radius: 16px;
+          width: 136px;
+          z-index: 10;
+        }
+      }
+
+      hr {
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccd1ee;
+      }
+
+      &-form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .select-group {
+          margin-bottom: 16px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+          & > .input {
+            margin-bottom: 24px;
+          }
+        }
+
+        &-checkbox {
+          margin-bottom: 12px !important;
+        }
+
+        p {
+          font-weight: 600;
+        }
+
+        .decorade {
+          cursor: pointer;
+          font-weight: bold;
+          text-decoration: underline;
+        }
+
+        button {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+
+  &-footer {
+    margin-top: auto;
+    z-index: 11;
+  }
+}
+
+@media (min-width: 720px) {
+  .insured {
+    &-blur {
+      &-green {
+        position: absolute;
+        right: 0;
+        top: -76px;
+        width: 432px;
+      }
+
+      &-purple {
+        position: absolute;
+        left: 0;
+        bottom: 109px;
+        width: 432px;
+      }
+    }
+
+    &-content {
+      display: flex;
+      justify-content: center;
+      padding: 10px 60px;
+      gap: 70px;
+      margin: auto;
+
+      &-imgLarge {
+        display: block;
+        border-radius: 20px;
+      }
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 0 70px;
+        max-width: 400px;
+
+        &-banner {
+          justify-content: start;
+
+          &-text {
+            display: flex;
+            flex-direction: column;
+
+            .tag {
+              margin-bottom: 16px;
+            }
+
+            h1 {
+              font-size: 32px;
+            }
+          }
+
+          img {
+            display: none;
+          }
+        }
+
+        &-form {
+
+            form{
+                gap: 5px;
+            }
+          p {
+            font-weight: bold;
+          }
+        }
+
+        hr {
+          display: none;
+        }
+      }
+    }
+  }
+}

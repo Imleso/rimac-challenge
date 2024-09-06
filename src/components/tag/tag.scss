@@ -1,0 +1,14 @@
+.tag{
+     background: linear-gradient(86.01deg, #00F4E2 0%, #00FF7F 100%);
+     width: fit-content;
+     border-radius: 5px;
+     padding: 2px 4px;
+     font-weight: 700;
+     font-size: 14px;
+}
+
+@media (min-width: 720px) {
+     .tag {
+          padding: 4px;
+     }
+}

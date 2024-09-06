@@ -1,0 +1,24 @@
+.selectCircule {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &-select{
+        width: 100%;
+        max-height: 24px;
+    }
+
+
+    &-notSelect{
+        border-radius: 50%;
+        width: 22px;
+        height: 21px;
+        border: 1px solid #b1baf3;
+    }
+  }
+  

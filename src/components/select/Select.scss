@@ -1,0 +1,54 @@
+.select {
+    min-width: 100px;
+    position: relative;
+    
+    .box {
+        border: 1px solid #5E6488;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        transition: height 0.3s;
+        background: white;
+        padding-left: 10px;
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+
+        div {
+            height: 56px;
+            display: flex;
+            align-items: center;
+        }
+
+        .select-options {
+            list-style: none;
+            max-height: 70px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+
+            &::-webkit-scrollbar {
+                -webkit-appearance: none;
+                padding: 20px;
+              }
+              &::-webkit-scrollbar:vertical {
+                width: 8px;
+              }
+          
+              &::-webkit-scrollbar-thumb {
+                background-color: rgba(128, 128, 128, 0.747);
+                border-radius: 30px;
+              }
+
+            li {
+                margin-top: 8px;
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &-options {
+
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+}

@@ -1,0 +1,26 @@
+.button {
+  border-radius: 32px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 32px;
+  width: 100%;
+}
+
+.is--red {
+  background: #ff1c44;
+}
+
+.is--black {
+  background: black;
+  
+  padding: 20px 40px;
+}
+
+
+@media (min-width: 720px) {
+  .button{
+    width: auto;
+  }
+}

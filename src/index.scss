@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'BRSonoma';
+  src:url('./fonts/BRSonoma/ttf/BRSonoma-Bold.ttf') format('truetype'),
+  url('./fonts/BRSonoma/otf/BRSonoma-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'BRSonoma';
+  src: url('./fonts/BRSonoma/ttf/BRSonoma-SemiBold.ttf') format('truetype'),
+  url('./fonts/BRSonoma/otf/BRSonoma-SemiBold.otf') format('opentype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'BRSonoma';
+  src: url('./fonts/BRSonoma/ttf/BRSonoma-Medium.ttf') format('truetype'),
+  url('./fonts/BRSonoma/otf/BRSonoma-Medium.otf') format('opentype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'BRSonoma';
+  src: url('./fonts/BRSonoma/ttf/BRSonoma-Regular.ttf') format('truetype'),
+  url('./fonts/BRSonoma/otf/BRSonoma-Regular.otf') format('opentype');
+  font-weight: 400;
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'BRSonoma';
+}
+

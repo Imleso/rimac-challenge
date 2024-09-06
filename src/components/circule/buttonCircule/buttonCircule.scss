@@ -1,0 +1,26 @@
+.buttonCircule {
+  border: 2px solid #a9afd9;
+  font-weight: 800;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #4f4fff;
+    font-weight: 800;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+  }
+}
